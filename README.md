@@ -65,7 +65,6 @@ I learned elementary of semantic HTML5 markup, CSS custom properties, flexbox, m
      padding-bottom: 0;
     }
 ```
-```
 
 ### Continued development
 
