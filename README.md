@@ -50,10 +50,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned elementary of semantic HTML5 markup, CSS custom properties, flexbox, media queries, optimal layout depending on device's screen size, hover and focus states for interactive elements
-
-To see how you can add code snippets, see below:
-
+I learned elementary of semantic HTML5 markup, CSS custom properties, flexbox, media queries, optimal layout depending on device's screen size, hover and focus states for interactive elements:
 
 ```css
  header {
