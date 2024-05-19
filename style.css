@@ -15,19 +15,24 @@ body {
     align-items: center;
     min-height: 100%;
     font-family: Bai Jamjuree;
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+}
 
 main {
     display: flex;
     margin: 0 auto;
     flex-direction: column; 
-    align-items: center;
+    align-items: center;   
+    max-width: 23.43rem;
 }
 
 .wrapper {
     margin: 0 auto;
     overflow: hidden;
-    min-width: 23.43rem;
+    max-width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {   
@@ -35,7 +40,7 @@ header {
     flex-direction: column; 
     align-items: center;
     text-align: center;
-    padding: 8.125rem 0;
+    padding: 7.812rem 0 0;
     background-image: url("images/bg-header-mobile.png");
     background-repeat: no-repeat;
     background-size: cover; 
@@ -47,13 +52,15 @@ header {
 .header-logo {
     display:block;
     margin:auto;
-    margin-bottom:3.44rem;
 }
 
 img.header-logo {
-    width: 10%;
     height: auto;
-    margin-bottom: 3.44rem;
+}
+
+.copy-history p{
+    margin: 1rem;
+    text-align: center;
 }
 
 .button-box{
@@ -68,8 +75,7 @@ img.header-logo {
     width: 100%;
 }
 
-.download-for-ios, .download-for-mac
-{
+.download-for-ios, .download-for-mac {
     border-radius: 2rem;
     font-size: 1.125rem;
     border: none;
@@ -102,6 +108,7 @@ img.header-logo {
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-top: 6rem;
 }
 
 .copy-history {
@@ -113,18 +120,22 @@ img.header-logo {
     align-items: center;
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 2.8rem;
-    margin: 0 2rem 1rem;
+p.text-available-gadgets {
     text-align: center;
+    max-width: 90%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: 600;
+    padding: 0 3rem;
 }
 
 h2 {
-    font-size: 2.25rem;
-    font-weight: 600;
     text-align: center;
-    margin: 0 4.5rem 1.25rem;
+    margin: 0;
+    max-width: 90%;
 }
 
 h3  {
@@ -133,36 +144,32 @@ h3  {
     text-align: center;
 }
 
-p {
-    line-height: 1.7rem;
-    font-size: 1.25rem;
-    padding: 0 3rem;
-    text-align: center;
-}
-
 .keep-trak {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 90%;
+}
+
+p.text-keep-trak {
+    text-align: center;
+    margin: 1rem 1rem 10rem;
 }
 
 img.image-computer {
-    max-width: 50%;
-     height: auto;
-    float: left;
-    padding: 1rem 0;
-}
+    padding: 0 3rem;
+    max-width: 80%;
+} 
 
 .wrapper-possibilities {
-    padding: 0 3.5rem;
+    text-align: center;
 }
 
-.icloud-sync {
-    margin: 3.5rem;
+.quick-search .icloud-sync .complete-history {
+    text-align: center;
 }
 
 .keep-possibilities {
-
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -171,19 +178,27 @@ img.image-computer {
 }
 
 .access-clipboard {
-    margin-top: 11rem;
+    margin-top: 10rem;
+}
+
+.access-clipboard h2{
+    max-width: 90%;
+}
+
+p.text-access-clipboard {
+    text-align: center;
 }
 
 .supercharge {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8rem;
+    text-align: center;
+    margin: 7.5rem 2rem;
 }
 
 .supercharge-workflow {
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .image-devices {
@@ -203,6 +218,10 @@ img.image-devices {
     align-items: center;
 }
 
+.create-blacklists h3, .plain-snippets h3, .sneak-preview h3 {
+    margin-bottom: 0;
+}
+
 .partners {
     margin-bottom: 6rem;
 }
@@ -212,11 +231,7 @@ img.image-devices {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-}
-
-.clipboard-history {
-    margin-top: 10rem;
+    gap: 3rem;
 }
 
 footer {
@@ -255,9 +270,8 @@ img.footer-logo {
     display: inline-block;
     text-decoration: none;
     color: var(--dark-grayish-blue);
-    width: 90%;
+    width: 100%;
     text-align: center;
-    margin: 2rem;
 }
 
 footer .about-us a:hover {
@@ -271,14 +285,13 @@ footer .about-us a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    margin: 1rem 3rem;
+    margin: 2rem 3rem;
     gap: 3rem;
 }
  
 .ours-social-links a img:hover {
     background: var(--strong-cyan) ;
     transition: all .1s ease-in-out;
-        
 }
   
 .attribution {
@@ -290,10 +303,11 @@ footer .about-us a:hover {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media screen and (min-width: 56.25rem) {
+@media screen and (min-width: 90rem) {
     main {
         margin: 0 auto;   
         overflow: hidden;
+        max-width: 90rem;
     }
 
     header {
@@ -305,13 +319,22 @@ footer .about-us a:hover {
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-     padding-bottom: 0;
+     min-width: 100%;
     }
-    
+
+    img.header-logo {
+        height: auto;
+        margin-bottom: 3.44rem;
+    }
+
     .clipboard-history {
         margin-top: 0;
     }
     
+    .copy-history p{
+        margin-bottom: 1rem;
+    }
+
     .access-history {
         display: flex;
         flex-wrap: wrap;
@@ -347,10 +370,19 @@ footer .about-us a:hover {
     }
     
     p.text-keep-trak {
-        margin: 0 10rem;
-        max-width: 30%;
+        margin: 2rem 10rem 0;
+        max-width: 60%;
     }
    
+    p.text-access-clipboard {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    p.text-supercharge-workflow {
+        text-align: center;
+    }
+
     .keep-possibilities {
         display: flex;
         flex-direction: row;
@@ -358,16 +390,34 @@ footer .about-us a:hover {
         justify-content: center;
         align-items: center;
         margin-top: 4.5rem;
-        gap: 4rem;
     }
 
+    .keep-trak {
+        min-width: 75%;
+    }
+
+    img.image-computer {
+        max-width: 50%;
+        height: auto;
+        float: left;
+       padding: 1rem 0;
+    }
+    
     .wrapper-possibilities {
         display: flex;
         flex-direction: column;
         justify-content: left;
+        padding:0 0 0 3.5rem
+    }
+
+    .access-clipboard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .quick-search h3, .icloud-sync h3, .complete-history h3{
+        margin: 0;
         text-align: left;
     }
 
@@ -377,9 +427,8 @@ footer .about-us a:hover {
 
     .quick-search p, .icloud-sync p, .complete-history p {
         text-align: left;
-        margin: 3rem 0;
+        margin:  0; 
         padding: 0;
-        max-width: 60%;
     }
 
     .supercharge {
@@ -388,17 +437,28 @@ footer .about-us a:hover {
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        margin-bottom: 10rem;
     }
     
     .supercharge-workflow {
         justify-content: center;
         align-items: center;
+        margin-top: -5rem;
     }
+
+    .supercharge-workflow h2 {
+        min-width: 100%;
+    }
+        
 
     .wrapper-supercharge {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: 80%;
+        gap: inherit;
+    }
+
+    img.image-devices {
+        margin-bottom: 3rem;
     }
 
     .create-blacklists, .plain-snippets, .sneak-preview {
@@ -407,9 +467,11 @@ footer .about-us a:hover {
         align-items: center;
     }
 
-    .create-blacklists p, .plain-snippets p, .sneak-preview p{
-        max-width: 60%;
+    p.text-create-blacklists, p.text-plain-snippets, p.text-sneak-preview {
+        padding: 0;
+        text-align: center;
     }
+
 
     .partners {
         display: flex;
@@ -424,14 +486,13 @@ footer .about-us a:hover {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 10rem;
-        max-width: 90%;
+        gap: 7rem;
     }
 
     footer {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-        gap: 5rem;
+        grid-template-columns: 1fr 1.5fr 1fr ;
+        align-items: baseline;
         justify-content: center;
         align-items: center;
         overflow: hidden;
@@ -440,21 +501,22 @@ footer .about-us a:hover {
    
     .footer-logo {
         width: 30%;
-        margin: 2.5rem 0 2.5rem 30rem;
+        margin: 2.5rem 0 2.5rem 5rem;
     }
 
     img.footer-logo {
-        width: 30%;
         margin: 0;
         align-items: flex-end;
-        
     }
 
     .about-us {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        font-weight: 600;
+        align-items: flex-start;
+        font-weight: 600;  
+        width: 90%;
+        margin: 2rem;
+        gap: 2rem;
     }
 
     p.about-us{
@@ -462,10 +524,10 @@ footer .about-us a:hover {
     }
 
     .ours-social-links{
-        display: flex;
         align-items: center;
         justify-content: center;
-        margin: 1rem 10rem 3rem;
+        flex-direction: row;
+        gap: 1rem;
     }
    
     .ours-social-links a{
